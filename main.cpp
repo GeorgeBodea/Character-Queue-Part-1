@@ -23,7 +23,7 @@ public:
     {
         next = NULL;
     }
-
+    
     Nod *alocare_adresa(Nod* adresa)
     {
         next = adresa;
