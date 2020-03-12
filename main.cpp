@@ -143,6 +143,23 @@ public:
 
         return coada_finala;
     }
+    
+    ~ Coada_de_caractere()
+        {
+          Nod* curent = inceput;
+        if (curent == sfarsit)
+        {
+            inceput = NULL;
+            sfarsit = NULL;
+        }
+        else
+        {
+            inceput = inceput -> interogare_next();
+            delete curent;
+        }
+
+        }
+    
     friend ostream &operator << (ostream& output,Coada_de_caractere &coada);
     friend istream &operator >> (istream& input,Coada_de_caractere &coada);
 
