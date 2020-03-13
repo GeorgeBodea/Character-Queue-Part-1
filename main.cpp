@@ -145,20 +145,17 @@ public:
     }
     
     ~ Coada_de_caractere()
+    {
+        Nod* curent=inceput;
+        Nod* aux;
+        while(curent!=NULL)
         {
-          Nod* curent = inceput;
-        if (curent == sfarsit)
-        {
-            inceput = NULL;
-            sfarsit = NULL;
-        }
-        else
-        {
-            inceput = inceput -> interogare_next();
-            delete curent;
+        aux=curent;
+        curent = curent->interogare_next();
+        delete aux;
         }
 
-        }
+    }
     
     friend ostream &operator << (ostream& output,Coada_de_caractere &coada);
     friend istream &operator >> (istream& input,Coada_de_caractere &coada);
