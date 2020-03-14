@@ -19,7 +19,7 @@ public:
         next = NULL;
     }
 
-    void alocare_adresa(Nod* adresa)
+    void seteaza_next(Nod* adresa)
     {
         next = adresa;
     }
@@ -56,10 +56,10 @@ public:
         }
         else
         {
-            sfarsit -> alocare_adresa(curent);
+            sfarsit -> seteaza_next(curent);
             sfarsit = curent;
         }
-        sfarsit -> alocare_adresa(NULL);
+        sfarsit -> seteaza_next(NULL);
 
     }
 
@@ -73,10 +73,10 @@ public:
         }
         else
         {
-            sfarsit -> alocare_adresa(curent);
+            sfarsit -> seteaza_next(curent);
             sfarsit = curent;
         }
-        sfarsit -> alocare_adresa(NULL);
+        sfarsit -> seteaza_next(NULL);
     }
 
     void elimina()
